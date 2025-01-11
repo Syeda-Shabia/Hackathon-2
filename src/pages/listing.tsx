@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Listing from '../components/Listing'
+import Listing from '@/components/Listing'
 
 const listing = () => {
   
@@ -12,4 +12,4 @@ const listing = () => {
 
 }
 
-export default listing
+export default listing;
