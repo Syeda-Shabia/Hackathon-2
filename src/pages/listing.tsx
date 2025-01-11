@@ -2,7 +2,7 @@ import React from 'react'
 
 import Listing from '../components/Listing'
 
-const listing = () => {
+const listing = () => (
   
   <>
 
@@ -10,6 +10,6 @@ const listing = () => {
    
   </>
 
-}
+)
 
 export default listing;
