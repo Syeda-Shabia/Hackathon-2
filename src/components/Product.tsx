@@ -1,539 +1,3 @@
-//  import Image from 'next/image'
-//  import React from 'react'
-
-//  const Product: React.FC = () => {
-//    return (
-//      <div className="flex flex-col items-center p-0 relative w-full h-[2500px] bg-[#F9F9F9]">
-//         {/* Banners */}
-//        <div className="w-full h-[41px] bg-[#2A254B] flex-none order-0 flex-grow-0 relative">
-//           {/* Close */}
-//           <div className="absolute w-[24px] h-[24px] right-[16px] top-[12px] bg-blend-multiply">
-//             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http:www.w3.org/2000/svg">
-//               <path d="M12 1.05L10.95 0L6 4.95L1.05 0L0 1.05L4.95 6L0 10.95L1.05 12L6 7.05L10.95 12L12 10.95L7.05 6L12 1.05Z" fill="white" />
-//             </svg>
-//           </div>
-//           {/* Frame 21 */}
-//           <div className="absolute flex flex-row items-center gap-[8px] w-[407px] h-[19px] left-[calc(50%-203.5px)] top-[11px]">
-//             {/* Delivery */}
-//             <div className="w-[16px] h-[16px] bg-blend-multiply flex-none order-0 flex-grow-0">
-//               <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http:www.w3.org/2000/svg">
-//                 <rect width="16" height="16" transform="translate(0 0.5)" fill="white" style={{ mixBlendMode: 'multiply' }} />
-//                 <path d="M8 8.5H2V9.5H8V8.5Z" fill="white" />
-//                 <path d="M6 6H1V7H6V6Z" fill="white" />
-//                 <path d="M14.9594 8.8032L13.4594 5.3032C13.421 5.21319 13.357 5.13646 13.2753 5.08256C13.1936 5.02865 13.0979 4.99994 13 5H11.5V4C11.5 3.86739 11.4473 3.74021 11.3536 3.64645C11.2598 3.55268 11.1326 3.5 11 3.5H3V4.5H10.5V10.7781C10.2722 10.9104 10.0728 11.0865 9.91339 11.2962C9.75395 11.5059 9.6376 11.7451 9.57105 12H6.42895C6.30725 11.5287 6.01784 11.1179 5.61495 10.8447C5.21206 10.5715 4.72336 10.4546 4.24045 10.5159C3.75754 10.5773 3.31358 10.8126 2.99179 11.1779C2.66999 11.5431 2.49246 12.0132 2.49246 12.5C2.49246 12.9868 2.66999 13.4569 2.99179 13.8221C3.31358 14.1874 3.75754 14.4227 4.24045 14.4841C4.72336 14.5454 5.21206 14.4285 5.61495 14.1553C6.01784 13.8821 6.30725 13.4713 6.42895 13H9.57105C9.68007 13.4289 9.92892 13.8092 10.2783 14.0808C10.6276 14.3525 11.0575 14.4999 11.5 14.4999C11.9425 14.4999 12.3724 14.3525 12.7217 14.0808C13.0711 13.8092 13.3199 13.4289 13.429 13H14.5C14.6326 13 14.7598 12.9473 14.8536 12.8536C14.9473 12.7598 15 12.6326 15 12.5V9C15 8.93233 14.9862 8.86537 14.9594 8.8032ZM4.5 13.5C4.30222 13.5 4.10888 13.4414 3.94443 13.3315C3.77998 13.2216 3.65181 13.0654 3.57612 12.8827C3.50043 12.7 3.48063 12.4989 3.51921 12.3049C3.5578 12.1109 3.65304 11.9327 3.79289 11.7929C3.93275 11.653 4.11093 11.5578 4.30491 11.5192C4.49889 11.4806 4.69996 11.5004 4.88268 11.5761C5.06541 11.6518 5.22159 11.78 5.33147 11.9444C5.44135 12.1089 5.5 12.3022 5.5 12.5C5.4997 12.7651 5.39424 13.0193 5.20677 13.2068C5.0193 13.3942 4.76512 13.4997 4.5 13.5ZM11.5 6H12.6704L13.742 8.5H11.5V6ZM11.5 13.5C11.3022 13.5 11.1089 13.4414 10.9444 13.3315C10.78 13.2216 10.6518 13.0654 10.5761 12.8827C10.5004 12.7 10.4806 12.4989 10.5192 12.3049C10.5578 12.1109 10.653 11.9327 10.7929 11.7929C10.9327 11.653 11.1109 11.5578 11.3049 11.5192C11.4989 11.4806 11.7 11.5004 11.8827 11.5761C12.0654 11.6518 12.2216 11.78 12.3315 11.9444C12.4414 12.1089 12.5 12.3022 12.5 12.5C12.4997 12.7651 12.3942 13.0193 12.2068 13.2068C12.0193 13.3942 11.7651 13.4997 11.5 13.5ZM14 12H13.429C13.3188 11.5717 13.0696 11.1921 12.7206 10.9207C12.3715 10.6492 11.9422 10.5013 11.5 10.5V9.5H14V12Z" fill="white" />
-//               </svg>
-//             </div>
-//             {/* Free delivery text */}
-//             <div className="w-[399px] h-[19px] font-[family-name:var(--font-satoshi-light)] text-[14px] leading-[19px] text-white flex-none order-1 flex-grow-0">
-//               Free delivery on all orders over £50 with code easter checkout
-//             </div>
-//           </div>
-//         </div>
-//        {/* Product Details */}
-//        <div className="relative w-full h-[759px] bg-white flex-none order-2 flex-grow-0">
-//          {/* Image Left */}
-//          <div className="absolute w-[721px] h-[759px] left-0 top-0 bg-[url('/photos/dandy3.png')]"></div>
-//          {/* Wrapper */}
-//          <div className="absolute w-[602px] h-[657px] left-[783px] top-[51px] bg-white">
-//            {/* Frame 154 */}
-//            <div className="absolute flex flex-col items-start p-0 gap-[13px] w-[281px] h-[89px] left-[40px] top-[40px]">
-//              {/* The Dandy Chair */}
-//              <div className="w-[281px] h-[44px] font-[family-name:var(--font-clash-display)] text-[36px] leading-[44px] text-[#2A254B] flex-none order-0 flex-grow-0">
-//                The Dandy Chair
-//              </div>
-//              {/* £250 */}
-//              <div className="w-[59px] h-[32px] font-[family-name:var(--font-satoshi-light)] text-[24px] leading-[32px] text-[#12131A] flex-none order-1 flex-grow-0">
-//                £250
-//              </div>
-//            </div>
-//            {/* Description */}
-//            <div className="absolute flex flex-col items-start p-[40px] gap-[16px] w-[602px] h-[251px] left-0 top-[143px]">
-//              {/* Description Text */}
-//              <div className="flex flex-col items-start p-0 gap-[16px] w-[522px] h-[188px] flex-none order-0 flex-grow-0">
-//                {/* Description */}
-//                <div className="w-[88px] h-[20px] font-[family-name:var(--font-clash-display)] text-[16px] leading-[20px] text-[#2A254B] flex-none order-0 flex-grow-0">
-//                  Description
-//                </div>
-//                {/* Frame 51 */}
-//                <div className="flex flex-col items-start p-0 gap-[12px] w-[522px] h-[152px] flex-none order-1 flex-grow-0">
-//                  {/* Frame 50 */}
-//                  <div className="flex flex-col items-start p-0 gap-[20px] w-[498px] h-[152px] flex-none order-0 flex-grow-0">
-//                    {/* A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery. */}
-//                    <div className="w-[498px] h-[66px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[22px] text-[#505977] flex-none order-0 flex-grow-0">
-//                      A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery.
-//                    </div>
-//                    {/* Premium material Handmade upholstery Quality timeless classic */}
-//                    <div className="w-[498px] h-[66px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[22px] text-[#505977] flex-none order-1 flex-grow-0">
-//                      Premium material Handmade upholstery Quality timeless classic
-//                    </div>
-//                  </div>
-//                </div>
-//              </div>
-//            </div>
-//            {/* Dimensions */}
-//            <div className="absolute w-[602px] h-[134px] left-0 top-[401px]">
-//              {/* Dimensions Text */}
-//              <div className="absolute flex flex-col items-start p-0 gap-[28px] w-[241px] h-[99px] left-[40px] top-[20px]">
-//                {/* Dimensions */}
-//                <div className="w-[89px] h-[20px] font-[family-name:var(--font-clash-display)] text-[16px] leading-[20px] text-[#2A254B] flex-none order-0 flex-grow-0">
-//                  Dimensions
-//                </div>
-//                {/* Metrics */}
-//                <div className="flex flex-row items-start p-0 gap-[57px] w-[241px] h-[51px] flex-none order-1 flex-grow-0">
-//                  {/* Height */}
-//                  <div className="flex flex-col items-start p-0 gap-[12px] w-[44px] h-[51px] flex-none order-0 flex-grow-0">
-//                    {/* Height */}
-//                    <div className="w-[43px] h-[17px] font-[family-name:var(--font-clash-display)] text-[14px] leading-[17px] text-[#2A254B] flex-none order-0 flex-grow-0">
-//                      Height
-//                    </div>
-//                    {/* 110cm */}
-//                    <div className="w-[44px] h-[22px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[22px] text-[#505977] flex-none order-1 flex-grow-0">
-//                      110cm
-//                    </div>
-//                  </div>
-//                  {/* Width */}
-//                  <div className="flex flex-col items-start p-0 gap-[12px] w-[40px] h-[51px] flex-none order-1 flex-grow-0">
-//                    {/* Width */}
-//                    <div className="w-[40px] h-[17px] font-[family-name:var(--font-clash-display)] text-[14px] leading-[17px] text-[#2A254B] flex-none order-0 flex-grow-0">
-//                      Width
-//                    </div>
-//                    {/* 75cm */}
-//                    <div className="w-[39px] h-[22px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[22px] text-[#505977] flex-none order-1 flex-grow-0">
-//                      75cm
-//                    </div>
-//                  </div>
-//                  {/* Depth */}
-//                  <div className="flex flex-col items-start p-0 gap-[12px] w-[43px] h-[51px] flex-none order-2 flex-grow-0">
-//                    {/* Depth */}
-//                    <div className="w-[41px] h-[17px] font-[family-name:var(--font-clash-display)] text-[14px] leading-[17px] text-[#2A254B] flex-none order-0 flex-grow-0">
-//                      Depth
-//                    </div>
-//                    {/* 50cm */}
-//                    <div className="w-[43px] h-[22px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[22px] text-[#505977] flex-none order-1 flex-grow-0">
-//                      50cm
-//                    </div>
-//                  </div>
-//                </div>
-//              </div>
-//            </div>
-//            {/* Amount */}
-//            <div className="absolute box-border w-[602px] h-[115px] left-0 top-[542px]">
-//              {/* Quantity */}
-//              <div className="absolute flex flex-row items-center p-0 gap-[22px] w-[209px] h-[46px] left-[40px] top-[27px]">
-//                {/* Amount: */}
-//                <div className="w-[65px] h-[20px] font-[family-name:var(--font-clash-display)] text-[16px] leading-[20px] text-[#2A254B] flex-none order-0 flex-grow-0">
-//                  Amount:
-//                </div>
-//                {/* Stepper */}
-//                <div className="box-border flex flex-row justify-between items-center p-[12px_16px] gap-[33px] w-[122px] h-[46px] bg-[#F9F9F9] flex-none order-1 flex-grow-0">
-//                  {/* - */}
-//                  <div className="m-auto w-[7px] h-[22px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[22px] text-[#CAC6DA] flex-none order-0 flex-grow-0">
-//                    -
-//                  </div>
-//                  {/* 1 */}
-//                  <div className="m-auto w-[6px] h-[22px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[22px] text-[#2A254B] flex-none order-1 flex-grow-0">
-//                    1
-//                  </div>
-//                  {/* + */}
-//                  <div className="m-auto w-[11px] h-[22px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[22px] text-[#CAC6DA] flex-none order-2 flex-grow-0">
-//                    +
-//                  </div>
-//                </div>
-//              </div>
-//              {/* Button light */}
-//              <div className="box-border flex flex-row items-start p-[16px_32px] gap-[10px] absolute w-[143px] h-[56px] left-[419px] top-[27px] bg-[#2A254B]">
-//                {/* Button */}
-//                <div className="w-[82px] h-[24px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[150%] text-white flex-none order-0 flex-grow-0">
-//                  Add to cart
-//                </div>
-//              </div>
-//            </div>
-//          </div>
-//        </div>
-//         {/* Listings */}
-//        <section className="relative w-full h-[761px] bg-white flex-none order-3 flex-grow-0">
-//          {/* Listings Heading */}
-//          <div className="absolute w-[280px] h-[39px] left-[80px] top-[80px] font-[family-name:var(--font-clash-display)] text-[32px] leading-[39px] text-[#2A254B]">
-//            You might also like
-//          </div>
-//          {/* Product Card 1 */}
-//          <div className="absolute flex flex-col items-start p-0 gap-[24px] w-[305px] h-[462px] left-[calc(50%-487.5px)] top-[calc(50%-229px)]">
-//            <div className="relative w-[305px] h-[375px] bg-[url('/photos/dandy-chair.png')] bg-cover"></div>
-//            <div className="flex flex-col items-start p-0 gap-[8px] w-[154px] h-[63px]">
-//              <div className="w-[154px] h-[28px] font-[family-name:var(--font-clash-display)] text-[20px] leading-[140%] text-[#2A254B]">
-//                The Dandy chair
-//              </div>
-//              <div className="w-[44px] h-[27px] font-[family-name:var(--font-satoshi-light)] text-[18px] leading-[150%] text-[#2A254B]">
-//                £250
-//              </div>
-//            </div>
-//          </div>
-//          {/* Product Card 2 */}
-//          <div className="absolute flex flex-col items-start p-0 gap-[24px] w-[305px] h-[462px] left-[calc(50%-162.5px)] top-[calc(50%-229px)]">
-//            <div className="relative w-[305px] h-[375px] bg-[url('/photos/three-vases.png')] bg-cover"></div>
-//            <div className="flex flex-col items-start p-0 gap-[8px] w-[145px] h-[63px]">
-//              <div className="w-[145px] h-[28px] font-[family-name:var(--font-clash-display)] text-[20px] leading-[140%] text-[#2A254B]">
-//              Rustic Vase Set
-//              </div>
-//              <div className="w-[38px] h-[27px] font-[family-name:var(--font-satoshi-light)] text-[18px] leading-[150%] text-[#2A254B]">
-//                £250
-//              </div>
-//            </div>
-//          </div>
-//          {/* Product Card 3 */}
-//          <div className="absolute flex flex-col items-start p-0 gap-[24px] w-[305px] h-[462px] left-[calc(50%+162.5px)] top-[calc(50%-229px)]">
-//            <div className="relative w-[305px] h-[375px] bg-[url('/photos/silky-vase.png')] bg-cover"></div>
-//            <div className="flex flex-col items-start p-0 gap-[8px] w-[134px] h-[63px]">
-//              <div className="w-[150px] h-[28px] font-[family-name:var(--font-clash-display)] text-[20px] leading-[140%] text-[#2A254B]">
-//                The Silky Vase
-//              </div>
-//              <div className="w-[38px] h-[27px] font-[family-name:var(--font-satoshi-light)] text-[18px] leading-[150%] text-[#2A254B]">
-//                £250
-//              </div>
-//            </div>
-//          </div>
-//          {/* Product Card 4 */}
-//          <div className="absolute flex flex-col items-start p-0 gap-[24px] w-[305px] h-[462px] left-[calc(50%+487.5px)] top-[calc(50%-229px)]">
-//            <div className="relative w-[305px] h-[375px] bg-[url('/photos/lucy-lamp.png')] bg-cover"></div>
-//            <div className="flex flex-col items-start p-0 gap-[8px] w-[145px] h-[63px]">
-//              <div className="w-[145px] h-[28px] font-[family-name:var(--font-clash-display)] text-[20px] leading-[140%] text-[#2A254B]">
-//                The Lucy lamp
-//              </div>
-//              <div className="w-[43px] h-[27px] font-[family-name:var(--font-satoshi-light)] text-[18px] leading-[150%] text-[#2A254B]">
-//                £250
-//              </div>
-//            </div>
-//          </div>
-//          {/* Button light */}
-//          <div className="absolute flex flex-row items-center justify-center gap-[10px] w-[170px] h-[56px] left-[635px] top-[649px] bg-[#F9F9F9]">
-//            <div className="w-[126px] h-[24px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[150%] text-[#2A254B]">
-//              View collection
-//            </div>
-//          </div>
-//        </section>
-//  {/* Features */}
-//              <div className="relative w-full h-[355px] bg-white flex-none order-4 flex-grow-0">
-//                {/* Features Heading */}
-//                <div className="absolute w-[366px] h-[34px] left-[529px] top-[60px] font-[family-name:var(--font-clash-display)] text-[24px] leading-[140%] text-[#2A254B]">
-//                  What makes our brand different
-//                </div>
-//                {/* Feature 1 */}
-//                <div className="absolute flex flex-col items-start p-0 gap-[16px] w-[270px] h-[124px] left-[86px] top-[145px]">
-//                  <div className="w-[24px] h-[24px] bg-white bg-blend-multiply flex-none order-0 flex-grow-0"></div>
-//                  <div className="absolute left-[1.5px] top-[4.5px] h-[16.5px] w-[21px]">
-//                    <Image src="/photos/delivery.png" alt="delivery" layout="fill" objectFit="cover"/>
-//                  </div>
-//                  <div className="flex flex-col items-start p-0 gap-[8px] w-[270px] h-[84px] flex-none order-1 flex-grow-0">
-//                    <div className="w-[199px] h-[28px] font-[family-name:var(--font-clash-display)] text-[20px] leading-[140%] text-[#2A254B]">
-//                      Next day as standard
-//                    </div>
-//                    <div className="w-[270px] h-[48px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[150%] text-[#2A254B]">
-//                      Order before 3pm and get your order the next day as standard
-//                    </div>
-//                  </div>
-//                </div>
-//                {/* Feature 2 */}
-//                <div className="absolute flex flex-col items-start p-0 gap-[13px] w-[265px] h-[124px] left-[1065px] top-[145px]">
-//                  <div className="w-[24px] h-[24px] bg-white bg-blend-multiply flex-none order-0 flex-grow-0"></div>
-//                  <div className="absolute left-[4.5%] top-[1.5%] h-[21.42px] w-[16.5px]">
-//                    <Image src="/photos/sprout.png" alt="sprout" layout="fill" objectFit="cover"/>
-//                  </div>
-//                  <div className="flex flex-col items-start p-0 gap-[11px] w-[265px] h-[87px] flex-none order-1 flex-grow-0">
-//                    <div className="w-[196px] h-[28px] font-[family-name:var(--font-clash-display)] text-[20px] leading-[140%] text-[#2A254B]">
-//                      Recycled packaging
-//                    </div>
-//                    <div className="w-[265px] h-[48px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[150%] text-[#2A254B]">
-//                      We use 100% recycled packaging to ensure our footprint is manageable
-//                    </div>
-//                  </div>
-//                </div>
-//                {/* Feature 3 */}
-//                <div className="absolute flex flex-col items-start p-0 gap-[16px] w-[235px] h-[124px] left-[739px] top-[145px]">
-//                  <div className="w-[24px] h-[24px] bg-white bg-blend-multiply flex-none order-0 flex-grow-0"></div>
-//                  <div className="absolute left-[1.5px] top-[4.5px] h-[15px] w-[21px]">
-//                    <Image src="/photos/purchase.png" alt="purchase" layout="fill" objectFit="cover"/>
-//                  </div>
-//                  <div className="flex flex-col items-start p-0 gap-[8px] w-[235px] h-[84px] flex-none order-1 flex-grow-0">
-//                    <div className="w-[196px] h-[28px] font-[family-name:var(--font-clash-display)] text-[20px] leading-[140%] text-[#2A254B]">
-//                      Unbeatable prices
-//                    </div>
-//                    <div className="w-[235px] h-[48px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[150%] text-[#2A254B]">
-//                      For our materials and quality you won’t find better prices anywhere
-//                    </div>
-//                  </div>
-//                </div>
-//                {/* Feature 4 */}
-//                <div className="absolute flex flex-col items-start p-0 gap-[16px] w-[266px] h-[124px] left-[415px] top-[145px]">
-//                  <div className="w-[24px] h-[24px] bg-white bg-blend-multiply flex-none order-0 flex-grow-0"></div>
-//                  <div className="absolute left-[1.5px] top-[1.5px] h-[21px] w-[21px]">
-//                    <Image src="/photos/checkMark.png" alt="checkMark" layout="fill" objectFit="cover"/>
-//                  </div>
-//                  <div className="flex flex-col items-start p-0 gap-[8px] w-[266px] h-[84px] flex-none order-1 flex-grow-0">
-//                    <div className="w-[205px] h-[28px] font-[family-name:var(--font-clash-display)] text-[20px] leading-[140%] text-[#2A254B]">
-//                      Made by true artisans
-//                    </div>
-//                    <div className="w-[266px] h-[48px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[150%] text-[#2A254B]">
-//                      Handmade crafted goods made with real passion and craftsmanship
-//                    </div>
-//                  </div>
-//                </div>
-//              </div>
-//                    {/* Email sign-up */}
-//        <section className="relative w-full h-[481px] bg-[#F9F9F9] flex-none order-5 flex-grow-0">
-//          <div className="absolute w-[1273px] h-[364px] left-[93px] top-[52px] bg-white">
-//            {/* Text Content */}
-//            <div className="absolute flex flex-col items-center p-0 gap-[16px] w-[571px] h-[114px] left-[351px] top-[68px]">
-//              <div className="w-[571px] h-[50px] font-[family-name:var(--font-clash-display)] text-[36px] leading-[140%] text-center text-[#2A254B]">
-//                Join the club and get the benefits
-//              </div>
-//              <div className="w-[470px] h-[48px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[150%] text-center text-[#2A254B]">
-//                Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop up stores and more
-//              </div>
-//            </div>
-//            {/* Text input */}
-//            <div className="absolute flex flex-row items-start p-0 w-[472px] h-[56px] left-[400px] top-[254px]">
-//              <div className="box-border w-[354px] h-[56px] bg-[#F9F9F9] flex-none order-0 flex-grow">
-//                <div className="absolute w-[117px] h-[22px] left-[32px] top-[17px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[22px] text-[#2A254B] opacity-20">
-//                  your@email.com
-//                </div>
-//              </div>
-//              <button className="box-border flex flex-row items-center justify-center gap-[10px] w-[118px] h-[56px] bg-[#2A254B] flex-none order-1 flex-grow-0">
-//                <span className="w-[60px] h-[24px] font-[family-name:var(--font-satoshi-light)] text-[16px] leading-[150%] text-white">
-//                  Sign up
-//                </span>
-//              </button>
-//            </div>
-//          </div>
-//        </section>
-//      </div>
-//    )
-//  }
-
-//  export default Product;
-
-//  import React from 'react';
-//  import Link from 'next/link';
-
-//  const Product = () => {
-//    return (
-//      <div className="flex flex-col items-center bg-[#F9F9F9] w-full min-h-screen">
-//        {/* Banner Section */}
-//        <div className="w-full h-[41px] bg-[#2A254B] flex items-center justify-between px-4">
-//          <div className="flex items-center gap-2">
-//            <div className="w-4 h-4 bg-white bg-opacity-20"></div>
-//            <p className="text-white text-sm font-['Satoshi']">
-//              Free delivery on all orders over £50 with code easter checkout
-//            </p>
-//          </div>
-//          <div className="w-6 h-6 bg-white bg-opacity-20"></div>
-//        </div>
-
-//        {/* Top Navigation */}
-//        <div className="w-full h-[80px] bg-white flex items-center justify-between px-8">
-//          <h1 className="text-2xl font-['Clash_Display'] text-[#22202E]">Avion</h1>
-//          <div className="flex gap-10">
-//            <Link href="#" className="text-[#726E8D] text-base font-['Satoshi']">Plant pots</Link>
-//            <Link href="#" className="text-[#726E8D] text-base font-['Satoshi']">Ceramics</Link>
-//            <Link href="#" className="text-[#726E8D] text-base font-['Satoshi']">Tables</Link>
-//            <Link href="#" className="text-[#726E8D] text-base font-['Satoshi']">Chairs</Link>
-//            <Link href="#" className="text-[#726E8D] text-base font-['Satoshi']">Crockery</Link>
-//            <Link href="#" className="text-[#726E8D] text-base font-['Satoshi']">Tableware</Link>
-//            <Link href="#" className="text-[#726E8D] text-base font-['Satoshi']">Cutlery</Link>
-//          </div>
-//          <div className="flex gap-4">
-//            <div className="w-4 h-4 bg-[#2A254B]"></div>
-//            <div className="w-4 h-4 bg-[#2A254B]"></div>
-//            <div className="w-4 h-4 bg-[#2A254B]"></div>
-//          </div>
-//        </div>
-
-//        {/* Product Details Section */}
-//        <div className="w-full bg-white flex">
-//          {/* Image Section */}
-//          <div className="w-1/2 h-[759px] bg-gray-200"></div>
-
-//          {/* Description Section */}
-//          <div className="w-1/2 p-12">
-//            <h2 className="text-4xl font-['Clash_Display'] text-[#2A254B]">The Dandy Chair</h2>
-//            <p className="text-2xl font-['Satoshi'] text-[#12131A] mt-4">£250</p>
-
-//            {/* Description */}
-//            <div className="mt-8">
-//              <h3 className="text-lg font-['Clash_Display'] text-[#2A254B]">Description</h3>
-//              <p className="text-base font-['Satoshi'] text-[#505977] mt-4">
-//                A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery.
-//              </p>
-//              <ul className="list-disc list-inside mt-4 text-base font-['Satoshi'] text-[#505977]">
-//                <li>Premium material</li>
-//                <li>Handmade upholstery</li>
-//                <li>Quality timeless classic</li>
-//              </ul>
-//            </div>
-
-//            {/* Dimensions */}
-//            <div className="mt-8">
-//              <h3 className="text-lg font-['Clash_Display'] text-[#2A254B]">Dimensions</h3>
-//              <div className="flex gap-8 mt-4">
-//                <div>
-//                  <p className="text-sm font-['Clash_Display'] text-[#2A254B]">Height</p>
-//                  <p className="text-base font-['Satoshi'] text-[#505977]">110cm</p>
-//                </div>
-//                <div>
-//                  <p className="text-sm font-['Clash_Display'] text-[#2A254B]">Width</p>
-//                  <p className="text-base font-['Satoshi'] text-[#505977]">75cm</p>
-//                </div>
-//                <div>
-//                  <p className="text-sm font-['Clash_Display'] text-[#2A254B]">Depth</p>
-//                  <p className="text-base font-['Satoshi'] text-[#505977]">50cm</p>
-//                </div>
-//              </div>
-//            </div>
-
-//            {/* Quantity and Add to Cart */}
-//            <div className="mt-8">
-//              <h3 className="text-lg font-['Clash_Display'] text-[#2A254B]">Quantity</h3>
-//              <div className="flex items-center gap-4 mt-4">
-//                <div className="flex items-center gap-4 bg-[#F9F9F9] p-2">
-//                  <button className="text-[#CAC6DA] text-base">-</button>
-//                  <span className="text-[#2A254B] text-base">1</span>
-//                  <button className="text-[#CAC6DA] text-base">+</button>
-//                </div>
-//                <button className="bg-[#2A254B] text-white px-8 py-4 text-base font-['Satoshi']">
-//                  Add to cart
-//                </button>
-//              </div>
-//            </div>
-//          </div>
-//        </div>
-
-//        {/* Product Listings */}
-//        <div className="w-full bg-white py-12">
-//          <h2 className="text-3xl font-['Clash_Display'] text-[#2A254B] text-center">New ceramics</h2>
-//          <div className="grid grid-cols-4 gap-8 mt-8 px-12">
-//            {/* Product Card */}
-//            {[1, 2, 3, 4].map((item) => (
-//              <div key={item} className="flex flex-col gap-4">
-//                <div className="w-full h-[375px] bg-gray-200"></div>
-//                <h3 className="text-xl font-['Clash_Display'] text-[#2A254B]">The Dandy Chair</h3>
-//                <p className="text-lg font-['Satoshi'] text-[#2A254B]">£250</p>
-//              </div>
-//            ))}
-//          </div>
-//          <button className="bg-[#F9F9F9] text-[#2A254B] px-8 py-4 text-base font-['Satoshi'] mx-auto block mt-8">
-//            View collection
-//          </button>
-//        </div>
-
-//        {/* Features Section */}
-//        <div className="w-full bg-white py-12">
-//          <h2 className="text-3xl font-['Clash_Display'] text-[#2A254B] text-center">
-//            What makes our brand different
-//          </h2>
-//          <div className="grid grid-cols-4 gap-8 mt-8 px-12">
-//            {/* Feature Block */}
-//            {[1, 2, 3, 4].map((item) => (
-//              <div key={item} className="flex flex-col gap-4">
-//                <div className="w-6 h-6 bg-[#2A254B]"></div>
-//                <h3 className="text-xl font-['Clash_Display'] text-[#2A254B]">Next day as standard</h3>
-//                <p className="text-base font-['Satoshi'] text-[#2A254B]">
-//                  Order before 3pm and get your order the next day as standard.
-//                </p>
-//              </div>
-//            ))}
-//          </div>
-//        </div>
-
-//        {/* Email Sign-up Section */}
-//        <div className="w-full bg-[#F9F9F9] py-12">
-//          <div className="bg-white p-12 mx-auto max-w-4xl">
-//            <h2 className="text-4xl font-['Clash_Display'] text-[#2A254B] text-center">
-//              Join the club and get the benefits
-//            </h2>
-//            <p className="text-base font-['Satoshi'] text-[#2A254B] text-center mt-4">
-//              Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop up stores and more.
-//            </p>
-//            <div className="flex mt-8">
-//              <input
-//                type="email"
-//                placeholder="your@email.com"
-//                className="w-[70%] h-14 bg-[#F9F9F9] pl-4 placeholder-[#2A254B] placeholder-opacity-20"
-//              />
-//              <button className="w-[30%] h-14 bg-[#2A254B] text-white text-base font-['Satoshi']">
-//                Sign up
-//              </button>
-//            </div>
-//          </div>
-//        </div>
-
-//        {/* Footer Section */}
-//        <div className="w-full bg-[#2A254B] py-12">
-//          <div className="max-w-7xl mx-auto px-8">
-//            <div className="flex justify-between">
-//              {/* Address */}
-//              <div className="flex flex-col gap-3">
-//                <h2 className="text-4xl font-['Clash_Display'] text-white">Avion</h2>
-//                <p className="text-sm font-['Satoshi'] text-white">21 New York Street</p>
-//                <p className="text-sm font-['Satoshi'] text-white">New York City</p>
-//                <p className="text-sm font-['Satoshi'] text-white">United States of America</p>
-//                <p className="text-sm font-['Satoshi'] text-white">432 34</p>
-//              </div>
-
-//              {/* Social Links */}
-//              <div className="flex flex-col gap-3">
-//                <h3 className="text-base font-['Clash_Display'] text-white">Social links</h3>
-//                <div className="flex gap-6">
-//                  {[1, 2, 3, 4, 5].map((item) => (
-//                    <div key={item} className="w-6 h-6 bg-white"></div>
-//                  ))}
-//                </div>
-//              </div>
-
-//              {/* Menu */}
-//              <div className="flex flex-col gap-3">
-//                <h3 className="text-base font-['Clash_Display'] text-white">Menu</h3>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">New arrivals</Link>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">Best sellers</Link>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">Recently viewed</Link>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">Popular this week</Link>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">All products</Link>
-//              </div>
-
-//              {/* Categories */}
-//              <div className="flex flex-col gap-3">
-//                <h3 className="text-base font-['Clash_Display'] text-white">Categories</h3>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">Crockery</Link>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">Furniture</Link>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">Homeware</Link>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">Plant pots</Link>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">Chairs</Link>
-//              </div>
-
-//              {/* Our Company */}
-//              <div className="flex flex-col gap-3">
-//                <h3 className="text-base font-['Clash_Display'] text-white">Our company</h3>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">About us</Link>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">Vacancies</Link>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">Contact us</Link>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">Privacy</Link>
-//                <Link href="#" className="text-sm font-['Satoshi'] text-white">Returns policy</Link>
-//              </div>
-//            </div>
-
-//            {/* Divider */}
-//            <div className="w-full border-t border-[#4E4D93] my-8"></div>
-
-//            {/* Copyright */}
-//            <p className="text-sm font-['Satoshi'] text-white text-center">
-//              Copyright 2022 Avion LTD
-//            </p>
-//          </div>
-//        </div>
-//      </div>
-//    );
-//  };
-
-//  export default Product;
-
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -541,8 +5,8 @@ import Image from 'next/image';
 const Product = () => {
   return (
     <div className="flex flex-col bg-[#F9F9F9] w-full min-h-screen">
-       {/* Banner */}
-       <section className="flex flex-row items-center justify-center p-2 w-full bg-[#2A254B] relative">
+      {/* Banner */}
+      <section className="flex flex-row items-center justify-center p-2 w-full bg-[#2A254B] relative">
         {/* Delivery Icon */}
         <div className="w-4 h-4 bg-blend-multiply mb-2"><svg width="18" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="24" height="24" fill="none" />
@@ -563,71 +27,71 @@ const Product = () => {
         </div>
       </section>
       {/* Product Details Section */}
-<div className="w-full bg-white flex flex-col md:flex-row">
-  {/* Image Section */}
-  <div className="w-full md:w-1/2 relative h-[400px] md:h-auto">
-    <Image
-      src="/photos/dandy3.png"
-      alt="Description of the image"
-      layout="fill"
-      objectFit="cover"
-      className="w-full h-full"
-    />
-  </div>
-
-  {/* Description Section */}
-  <div className="w-full md:w-1/2 p-6 md:px-12">
-    <h2 className="text-3xl md:text-4xl font-['Clash_Display'] text-[#2A254B]">The Dandy Chair</h2>
-    <p className="text-2xl font-['Satoshi'] text-[#12131A] mt-4">£250</p>
-
-    {/* Description */}
-    <div className="mt-8">
-      <h3 className="text-lg font-['Clash_Display'] text-[#2A254B]">Description</h3>
-      <p className="text-base font-['Satoshi'] text-[#505977] mt-4">
-        A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery.
-      </p>
-      <ul className="list-disc list-inside mt-4 text-base font-['Satoshi'] text-[#505977]">
-        <li>Premium material</li>
-        <li>Handmade upholstery</li>
-        <li>Quality timeless classic</li>
-      </ul>
-    </div>
-
-    {/* Dimensions */}
-    <div className="mt-8">
-      <h3 className="text-lg font-['Clash_Display'] text-[#2A254B]">Dimensions</h3>
-      <div className="flex gap-8 mt-4">
-        <div>
-          <p className="text-sm font-['Clash_Display'] text-[#2A254B]">Height</p>
-          <p className="text-base font-['Satoshi'] text-[#505977]">110cm</p>
+      <div className="w-full bg-white flex flex-col md:flex-row">
+        {/* Image Section */}
+        <div className="w-full md:w-1/2 relative h-[400px] md:h-auto">
+          <Image
+            src="/photos/dandy3.png"
+            alt="Description of the image"
+            layout="fill"
+            objectFit="cover"
+            className="w-full h-full"
+          />
         </div>
-        <div>
-          <p className="text-sm font-['Clash_Display'] text-[#2A254B]">Width</p>
-          <p className="text-base font-['Satoshi'] text-[#505977]">75cm</p>
-        </div>
-        <div>
-          <p className="text-sm font-['Clash_Display'] text-[#2A254B]">Depth</p>
-          <p className="text-base font-['Satoshi'] text-[#505977]">50cm</p>
+
+        {/* Description Section */}
+        <div className="w-full md:w-1/2 p-6 md:px-12">
+          <h2 className="text-3xl md:text-4xl font-['Clash_Display'] text-[#2A254B]">The Dandy Chair</h2>
+          <p className="text-2xl font-['Satoshi'] text-[#12131A] mt-4">£250</p>
+
+          {/* Description */}
+          <div className="mt-8">
+            <h3 className="text-lg font-['Clash_Display'] text-[#2A254B]">Description</h3>
+            <p className="text-base font-['Satoshi'] text-[#505977] mt-4">
+              A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery.
+            </p>
+            <ul className="list-disc list-inside mt-4 text-base font-['Satoshi'] text-[#505977]">
+              <li>Premium material</li>
+              <li>Handmade upholstery</li>
+              <li>Quality timeless classic</li>
+            </ul>
+          </div>
+
+          {/* Dimensions */}
+          <div className="mt-8">
+            <h3 className="text-lg font-['Clash_Display'] text-[#2A254B]">Dimensions</h3>
+            <div className="flex gap-8 mt-4">
+              <div>
+                <p className="text-sm font-['Clash_Display'] text-[#2A254B]">Height</p>
+                <p className="text-base font-['Satoshi'] text-[#505977]">110cm</p>
+              </div>
+              <div>
+                <p className="text-sm font-['Clash_Display'] text-[#2A254B]">Width</p>
+                <p className="text-base font-['Satoshi'] text-[#505977]">75cm</p>
+              </div>
+              <div>
+                <p className="text-sm font-['Clash_Display'] text-[#2A254B]">Depth</p>
+                <p className="text-base font-['Satoshi'] text-[#505977]">50cm</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Quantity and Add to Cart */}
+          <div className="mt-8">
+            <h3 className="text-lg font-['Clash_Display'] text-[#2A254B]">Quantity</h3>
+            <div className="flex flex-col md:flex-row items-center gap-4 mt-4">
+              <div className="flex items-center gap-4 bg-[#F9F9F9] p-2 w-full md:w-auto">
+                <button className="text-[#CAC6DA] text-base">-</button>
+                <span className="text-[#2A254B] text-base">1</span>
+                <button className="text-[#CAC6DA] text-base">+</button>
+              </div>
+              <button className="bg-[#2A254B] text-white px-8 py-4 text-base font-['Satoshi'] w-full md:w-auto">
+                Add to cart
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    {/* Quantity and Add to Cart */}
-    <div className="mt-8">
-      <h3 className="text-lg font-['Clash_Display'] text-[#2A254B]">Quantity</h3>
-      <div className="flex flex-col md:flex-row items-center gap-4 mt-4">
-        <div className="flex items-center gap-4 bg-[#F9F9F9] p-2 w-full md:w-auto">
-          <button className="text-[#CAC6DA] text-base">-</button>
-          <span className="text-[#2A254B] text-base">1</span>
-          <button className="text-[#CAC6DA] text-base">+</button>
-        </div>
-        <button className="bg-[#2A254B] text-white px-8 py-4 text-base font-['Satoshi'] w-full md:w-auto">
-          Add to cart
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
       {/* New Ceramics Section */}
       <section className="px-6 py-12 md:px-20 lg:px-24">
         <h3 className="text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-clash-display)] mb-8 text-left">New ceramics</h3>

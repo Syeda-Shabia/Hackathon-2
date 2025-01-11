@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
-// Define the type for navLinks
+// Defined the type for navLinks
 type NavLink = {
   name: string;
   slug: string;
