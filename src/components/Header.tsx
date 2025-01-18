@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
@@ -14,6 +13,7 @@ const navLinks: NavLink[] = [
   { name: "Listing", slug: "/listing" },
   { name: "Products", slug: "/products" },
   { name: "Shopping Basket", slug: "/shopping" },
+  { name: "Category", slug: "/categoriesPage" },
 ];
 
 const Header: React.FC = () => {
