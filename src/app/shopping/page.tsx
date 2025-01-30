@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ShoppingBasket from '../components/ShoppingBasket';
+import ShoppingBasket from '@/components/ShoppingBasket';
 
 const ShoppingPage = () => (
   <>

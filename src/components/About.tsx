@@ -30,7 +30,7 @@ const About = () => {
         <h1 className="font-[family-name:var(--font-clash-display)] font-semibold md:text-4xl text-3xl text-[#2A254B] mb-8">
           A brand built on the love of craftmanship, quality and outstanding customer service
         </h1>
-        <Link href="/listing" className="bg-[#F9F9F9] text-[#2A254B] py-4 px-8 inline-block">
+        <Link href="/products" className="bg-[#F9F9F9] text-[#2A254B] py-4 px-8 inline-block">
           View our products
         </Link>
       </div>

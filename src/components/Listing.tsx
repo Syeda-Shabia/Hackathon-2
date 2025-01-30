@@ -36,25 +36,25 @@ const Listing = () => {
             <button className="flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded">
               <span className="font-[family-name:var(--font-satoshi-light)]  text-dark-primary">Category</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6L8 10L12 6" stroke="#2A254B" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 6L8 10L12 6" stroke="#2A254B" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
             <button className="flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded">
-              <span className="font-[family-name:var(--font-satoshi-light)]  text-dark-primary">Product type</span>
+              <span className="font-[family-name:var(--font-satoshi-light)]  text-dark-primary">Origin</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6L8 10L12 6" stroke="#2A254B" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 6L8 10L12 6" stroke="#2A254B" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
             <button className="flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded">
               <span className="font-[family-name:var(--font-satoshi-light)]  text-dark-primary">Price</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6L8 10L12 6" stroke="#2A254B" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 6L8 10L12 6" stroke="#2A254B" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
             <button className="flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded">
-              <span className="font-[family-name:var(--font-satoshi-light)]  text-dark-primary">Brand</span>
+              <span className="font-[family-name:var(--font-satoshi-light)]  text-dark-primary">Material</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6L8 10L12 6" stroke="#2A254B" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 6L8 10L12 6" stroke="#2A254B" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
           </div>
@@ -65,7 +65,7 @@ const Listing = () => {
             <button className="flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded">
               <span className="font-[family-name:var(--font-satoshi-light)]  text-dark-primary">Date added</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6L8 10L12 6" stroke="#2A254B" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 6L8 10L12 6" stroke="#2A254B" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
           </div>

@@ -1,10 +1,69 @@
-
-import React from 'react';
+import { client } from '@/sanity/lib/client';
+import { getAllProductsQuery } from 'utils/queries';
+import ProductCard from '@/components/ProductCard';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const HomePage: React.FC = () => {
-  return (
+interface Product {
+  _id: string;
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  originalPrice: number;
+  discount: number;
+  category: string;
+  tags: string[];
+  mainImage: {
+    asset: {
+      url: string;
+    };
+  };
+  color: string[];
+  sizes: string[];
+  stock: number;
+  dimensions: {
+    width: string;
+    height: string;
+    depth: string;
+    weight: string;
+    seatHeight: string;
+    legHeight: string;
+  };
+  material: string;
+  secondaryMaterial: string;
+  configuration: string;
+  upholsteryMaterial: string;
+  upholsteryColor: string;
+  fillingMaterial: string;
+  finishType: string;
+  originOfManufacture: string;
+  warranty: {
+    summary: string;
+    serviceType: string;
+    covered: string;
+    notCovered: string;
+    domesticWarranty: string;
+  };
+  rating: {
+    average: number;
+    breakdown: {
+      fiveStars: number;
+      fourStars: number;
+      threeStars: number;
+      twoStars: number;
+      oneStar: number;
+    };
+  };
+  salesPackage: string;
+  modelNumber: string;
+  sku: string;
+  features: string[];
+}
+export default async function HomePage() {
+  // Fetch products directly in the component
+  const products = await client.fetch(getAllProductsQuery);
+return (
     <div className="relative items-center bg-white overflow-x-hidden">
       {/* Hero Section */}
       <section className="w-full h-auto md:h-[600px] text-white py-10 md:pt-16 flex justify-center">
@@ -131,183 +190,19 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* New Ceramics Section */}
-      <section className="px-6 py-12 md:px-20 lg:px-24">
-        <h3 className="text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-clash-display)] mb-8 text-left">New ceramics</h3>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {/* Product Card 1 */}
-          <div className="w-full">
-            <div className="mb-4 overflow-hidden relative">
-              <Image
-                src="/photos/dandy-chair.png"
-                alt="chair"
-                objectFit="cover"
-                objectPosition="center"
-                width={305}
-                height={357}
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <h4 className="text-xl md:text-2xl font-[family-name:var(--font-clash-display)] text-[#2A254B]">
-                The Dandy chair
-              </h4>
-              <p className="text-lg md:text-xl font-[family-name:var(--font-satoshi-light)] text-[#2A254B]">£250</p>
-            </div>
-          </div>
-
-          {/* Product Card 2 */}
-          <div className="w-full">
-            <div className="mb-4 overflow-hidden relative">
-              <Image
-                src="/photos/three-vases.png"
-                alt="Vases"
-                objectFit="cover"
-                objectPosition="center"
-                width={305}
-                height={357}
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <h4 className="text-xl md:text-2xl font-[family-name:var(--font-clash-display)] text-[#2A254B]">
-                Rustic Vase Set
-              </h4>
-              <p className="text-lg md:text-xl font-[family-name:var(--font-satoshi-light)] text-[#2A254B]">£155</p>
-            </div>
-          </div>
-
-          {/* Product Card 3 */}
-          <div className="w-full">
-            <div className="mb-4 overflow-hidden relative">
-              <Image
-                src="/photos/silky-vase.png"
-                alt="Vase"
-                width={305}
-                height={357}
-                objectFit="cover"
-                objectPosition="center"
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <h4 className="text-xl md:text-2xl font-[family-name:var(--font-clash-display)] text-[#2A254B]">
-                The Silky Vase
-              </h4>
-              <p className="text-lg md:text-xl font-[family-name:var(--font-satoshi-light)] text-[#2A254B]">£125</p>
-            </div>
-          </div>
-
-          {/* Product Card 4 */}
-          <div className="w-full">
-            <div className="mb-4 overflow-hidden relative">
-              <Image
-                src="/photos/lucy-lamp.png"
-                alt="Lamp"
-                width={305}
-                height={357}
-                objectFit="cover"
-                objectPosition="center"
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <h4 className="text-xl md:text-2xl font-[family-name:var(--font-clash-display)] text-[#2A254B]">
-                The Lucy Lamp
-              </h4>
-              <p className="text-lg md:text-xl font-[family-name:var(--font-satoshi-light)] text-[#2A254B]">£399</p>
-            </div>
-          </div>
+    <div className="relative items-center bg-white overflow-x-hidden">
+       {/* Featured Products */}
+       <div className="container justify-items-center mx-auto p-4">
+        <h1 className="text-3xl font-[family-name:var(--font-clash-display)] font-bold mb-6">Featured Products</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {products.map((product: Product) => (
+            <ProductCard key={product._id} product={product} />
+          ))}
         </div>
-
-        {/* View Collection Button */}
-        <div className="flex justify-center">
-          <Link
-            href="#"
-            className="bg-gray-100 py-4 px-8 font-[family-name:var(--font-satoshi-light)] text-[#2A254B] w-full sm:w-auto text-center hover:bg-gray-200 transition-colors"
-          >
-            View collection
-          </Link>
-        </div>
-      </section>
-      {/* Popular Products Section */}
-      <section className="px-6 py-12 md:px-20 lg:px-24">
-        <h3 className="text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-clash-display)] text-[#2A254B] mb-8 text-left">
-          Our popular products
-        </h3>
-
-        {/* Product Cards Container */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {/* Product Card 1 - The Poplar suede sofa */}
-          <div className="col-span-2">
-            <div className="bg-gray-100 mb-4 overflow-hidden relative">
-              <Image
-                src="/photos/Large.png"
-                alt="Sofa"
-                width={630}
-                height={357}
-                className="object-cover object-center w-full h-auto"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <h4 className="text-xl md:text-2xl font-[family-name:var(--font-clash-display)] text-[#2A254B]">
-                The Poplar suede sofa
-              </h4>
-              <p className="text-lg md:text-xl font-[family-name:var(--font-satoshi-light)] text-[#2A254B]">£980</p>
-            </div>
-          </div>
-
-          {/* Product Card 2 - The Dandy chair */}
-          <div>
-            <div className="bg-gray-100 mb-4 overflow-hidden relative">
-              <Image
-                src="/photos/dandy-chair.png"
-                alt="chair"
-                width={305}
-                height={357}
-                className="object-cover object-center w-full h-auto"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <h4 className="text-xl md:text-2xl font-[family-name:var(--font-clash-display)] text-[#2A254B]">
-                The Dandy chair
-              </h4>
-              <p className="text-lg md:text-xl font-[family-name:var(--font-satoshi-light)] text-[#2A254B]">£250</p>
-            </div>
-          </div>
-
-          {/* Product Card 3 - The Dandy chair 2 */}
-          <div>
-            <div className="bg-gray-100 mb-4 overflow-hidden relative">
-              <Image
-                src="/photos/dandy-chair2.png"
-                alt="Chair"
-                width={305}
-                height={357}
-                className="object-cover object-center w-full h-auto"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <h4 className="text-xl md:text-2xl font-[family-name:var(--font-clash-display)] text-[#2A254B]">
-                The Dandy chair
-              </h4>
-              <p className="text-lg md:text-xl font-[family-name:var(--font-satoshi-light)] text-[#2A254B]">£250</p>
-            </div>
-          </div>
-        </div>
-
-        {/* View Collection Button */}
-        <div className="flex justify-center">
-          <Link
-            href="#"
-            className="bg-gray-100 py-4 px-8 font-[family-name:var(--font-satoshi-light)] text-[#2A254B] w-full sm:w-auto text-center hover:bg-gray-200 transition-colors"
-          >
-            View collection
-          </Link>
-        </div>
-      </section>
-      {/* Email Sign-Up Section */}
-      <section className="px-6 py-12 bg-[#F9F9F9]">
+      </div>
+    </div>
+    {/* Email Sign-Up Section */}
+    <section className="px-6 py-12 bg-[#F9F9F9]">
         <div className="max-w-[1273px] mx-auto bg-white p-12">
           <div className="max-w-[571px] mx-auto text-center">
             <h4 className="text-[36px] font-[family-name:var(--font-clash-display)] text-[#2A254B] mb-4">
@@ -371,5 +266,3 @@ const HomePage: React.FC = () => {
     </div>
   );
 };
-
-export default HomePage;
