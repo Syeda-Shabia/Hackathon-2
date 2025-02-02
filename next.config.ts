@@ -14,10 +14,6 @@ const nextConfig: import('next').NextConfig = {
       },
     ],
   },
-  experimental: {
-    runtime: "nodejs", // ✅ Force Node.js runtime to avoid Clerk errors
-  },
 };
 
 export default nextConfig;
-
